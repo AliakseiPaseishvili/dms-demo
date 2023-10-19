@@ -1,1 +1,5 @@
-export { SettingsScreen } from './navigation/screens/Settings.screen';
+export {
+  SettingsScreen,
+  IdentityScreen,
+  SecurityScreen,
+} from "./navigation/screens";

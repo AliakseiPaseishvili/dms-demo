@@ -2,7 +2,9 @@ import React, { useMemo } from "react";
 import { NavItem } from "../../../components/NavItem";
 import { useTranslation } from "react-i18next";
 import { StyleSheet, Text } from "react-native";
-import { COLORS } from "../../../constants";
+import { COLORS, SCREENS } from "../../../constants";
+import { NavigationProp, useNavigation } from "@react-navigation/native";
+import { RootStackParamList } from "../../../navigation/Navigator";
 
 export const ClientScreens = () => {
   const { t } = useTranslation("settings");
@@ -11,19 +13,24 @@ export const ClientScreens = () => {
     () => [
       {
         title: t("settings:identity"),
+        to: SCREENS.SETTINGS.IDENTITY,
       },
       {
         title: t("settings:security"),
+        to: SCREENS.SETTINGS.SECURITY,
       },
     ],
     [t]
   );
 
+  const navigation = useNavigation<NavigationProp<RootStackParamList>>();
+
   return (
     <>
-      {links.map(({ title }, index) => (
+      {links.map(({ title, to }, index) => (
         <NavItem
-          onPress={() => {}}
+          key={to}
+          onPress={() => navigation.navigate(to)}
           style={[
             index === 0 ? styles.firstItem : null,
             index === links.length - 1 ? styles.lastItem : null,
