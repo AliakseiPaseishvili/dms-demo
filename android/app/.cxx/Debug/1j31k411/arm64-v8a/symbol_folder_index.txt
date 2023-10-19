@@ -1,0 +1,1 @@
+/Users/aleksei.paseishvili/Desktop/work/dms-demo/android/app/build/intermediates/cxx/Debug/1j31k411/obj/arm64-v8a
