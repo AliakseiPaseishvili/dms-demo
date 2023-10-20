@@ -17,5 +17,3 @@ Build project.
 Run `npx jetify`
 
 Run `npx react-native run-android`
-
-Android build is not working because of `react-native-reanimated`
