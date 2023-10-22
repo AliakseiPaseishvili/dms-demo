@@ -1,6 +1,6 @@
 import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { HomeScreen, ToOutbox, ToSettings } from "../features/home";
+import { Header, HomeScreen } from "../features/home";
 import { COLORS, SCREENS } from "../constants";
 import { useTranslation } from "react-i18next";
 import {
@@ -37,9 +37,7 @@ export const Navigator = () => {
         name={SCREENS.HOME.INDEX}
         component={HomeScreen}
         options={{
-          title: t("home:title"),
-          headerRight: () => <ToSettings />,
-          headerLeft: () => <ToOutbox />,
+          header: () => <Header />
         }}
       />
       <Stack.Screen

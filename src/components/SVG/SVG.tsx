@@ -4,13 +4,15 @@ import { Folder } from "./icons/Folder";
 import { ChevronRight } from "./icons/ChevronRight";
 import { User } from "./icons/User";
 import { Power } from "./icons/Power";
+import { Logo } from "./icons/Logo";
 
 export const ICON_NAMES = {
   GEAR: "GEAR",
   FOLDER: "FOLDER",
   CHEVRON_RIGHT: "CHEVRON_RIGHT",
   USER: "USER",
-  POWER: "POWER"
+  POWER: "POWER",
+  LOGO: "LOGO"
 };
 
 const ICONS = {
@@ -19,6 +21,7 @@ const ICONS = {
   [ICON_NAMES.CHEVRON_RIGHT]: ChevronRight,
   [ICON_NAMES.USER]: User,
   [ICON_NAMES.POWER]: Power,
+  [ICON_NAMES.LOGO]: Logo,
 };
 
 type SvgProps = {
