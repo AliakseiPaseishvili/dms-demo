@@ -3,6 +3,7 @@ import { Button } from "../Button";
 import { ReactChildren } from "../../types";
 import { StyleProp, StyleSheet, Text, ViewStyle } from "react-native";
 import { COLORS } from "../../constants";
+import { ICON_NAMES, SVG } from "../SVG";
 
 export const NavItem: FC<ReactChildren & { onPress: () => void; style?: StyleProp<ViewStyle> }> = ({
   onPress,
@@ -12,7 +13,7 @@ export const NavItem: FC<ReactChildren & { onPress: () => void; style?: StylePro
   return (
     <Button onPress={onPress} style={[styles.wrapper, style]}>
       {children}
-      <Text style={styles.arrow}>{'>'}</Text>
+      <SVG name={ICON_NAMES.CHEVRON_RIGHT} />
     </Button>
   );
 };

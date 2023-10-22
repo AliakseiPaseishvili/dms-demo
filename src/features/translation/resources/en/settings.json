@@ -3,5 +3,10 @@
   "client": "Client",
   "presense_detection": "Presence detection",
   "identity": "Identity",
-  "security": "Security"
+  "security": "Security",
+  "phone": "Phone",
+  "call": "Call",
+  "email": "Email",
+  "sms": "SMS",
+  "certificate": "Certificate"
 }

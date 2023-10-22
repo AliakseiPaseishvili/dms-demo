@@ -12,11 +12,9 @@ export const Contact = () => {
   return (
     <>
       <SafeAreaView style={styles.safeWrapper}>
-        <View style={styles.wrapper}>
-          <Button onPress={onOpen}>
-            <Text>Contact</Text>
-          </Button>
-        </View>
+        <Button style={styles.wrapper} onPress={onOpen}>
+          <Text>Contact</Text>
+        </Button>
       </SafeAreaView>
       <BottomSheetModal isOpened={isOpened} onClose={onClose}>
         <Text>Here will be chat</Text>
@@ -27,10 +25,6 @@ export const Contact = () => {
 
 const styles = StyleSheet.create({
   safeWrapper: {
-    position: "absolute",
-    left: 0,
-    right: 0,
-    bottom: 0,
     backgroundColor: COLORS.WHITE,
   },
   wrapper: {
